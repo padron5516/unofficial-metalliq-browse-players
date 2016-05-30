@@ -1,0 +1,29 @@
+{
+ "name"         : "Evolve [COLOR ff0084ff]-[/COLOR] Browse Play ([COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR])",
+ "repository"   : "repository.Goliath",
+ "plugin"       : "plugin.video.evolve",
+ "priority"     : 800,
+ "id"           : "provider.openeleq.evolve.browse.play",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [],
+ "tvshows"      : [],
+ "live"         : [
+  [
+   {
+    "link": "plugin://plugin.video.Evolve/?description&fanart=http%3a%2f%2fi.imgur.com%2fBuuhD16.png&mode=1&name=%5bB%5d%5bCOLOR%20red%5dSports%20%5b%2fCOLOR%5d%5bCOLOR%20white%5dPack%5b%2fCOLOR%5d%5b%2fB%5d&url=http%3a%2f%2fwww.matsbuilds.co.uk%2fabe%2fevolve_pack.xml",
+    "steps": [
+     ".*{basename}.*{extension|number_to_text()|text_to_number()}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link": "plugin://plugin.video.Evolve/?description&fanart=http%3a%2f%2fi.imgur.com%2fQKD73Gw.png&mode=1&name=%5bB%5d%5bCOLOR%20red%5dBeIn%5b%2fCOLOR%5d%5bCOLOR%20white%5d%20Sports%5b%2fCOLOR%5d%5b%2fB%5d&url=http%3a%2f%2fwww.matsbuilds.co.uk%2fabe%2fevolve_sports.xml",
+    "steps": [
+     ".*{basename}.*{extension|number_to_text()|text_to_number()}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ]
+}

@@ -1,0 +1,100 @@
+{
+ "name"         : "Project Cypher [COLOR ff0084ff]-[/COLOR] Browse Play ([COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR])",
+ "repository"   : "repository.q",
+ "plugin"       : "plugin.video.ProjectCypher",
+ "priority"     : 900,
+ "id"           : "provider.openeleq.ProjectCypher.browse.play",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.ProjectCypher/?fanart=http://repo.run/cypher/images/fanart.jpg&mode=1&name=&url=http://repo.run/cypher/newmovies.xml$$LSProEncKey=cypher$$",
+    "steps"     : [
+     ".*{title}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.ProjectCypher/?fanart=http://repo.run/cypher/images/fanart.jpg&mode=1&name=&url=http://repo.run/cypher/kidMovie.xml$$LSProEncKey=cypher$$",
+    "steps"     : [
+     ".*{title}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.ProjectCypher/?fanart=http://repo.run/cypher/images/fanart.jpg&mode=1&name=&url=http://repo.run/cypher/scihorror.xml$$LSProEncKey=cypher$$",
+    "steps"     : [
+     ".*{title}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.ProjectCypher/?fanart=http://repo.run/cypher/images/fanart.jpg&mode=1&name=&url=http://repo.run/cypher/randommovie.xml$$LSProEncKey=cypher$$",
+    "steps"     : [
+     ".*{title}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [],
+ "music"        : [],
+ "music_video"  : [
+  [
+   {
+    "link"      : "plugin://plugin.video.ProjectCypher/?fanart=http://repo.run/cypher/images/fanart.jpg&mode=1&name=&url=http://repo.run/cypher/concertevent.xml$$LSProEncKey=cypher$$",
+    "steps"     : [
+     ".*{artist}.*{album}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]  
+ ],
+ "live"         : [
+  [
+   {
+    "link"      : "plugin://plugin.video.ProjectCypher/?fanart=http://repo.run/cypher/images/fanart.jpg&mode=1&name=&url=http://repo.run/cypher/build/beincoded.m3u$$LSProEncKey=cypher$$",
+    "steps"     : [
+     ".*{name}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.ProjectCypher/?fanart=http://repo.run/cypher/images/fanart.jpg&mode=1&name=&url=http://repo.run/cypher/cyphermedia.m3u$$LSProEncKey=cypher$$",
+    "steps"     : [
+     ".*{name}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.ProjectCypher/?fanart=http://repo.run/cypher/images/fanart.jpg&mode=1&name=&url=http://repo.run/cypher/cyphermedia.xml$$LSProEncKey=cypher$$",
+    "steps"     : [
+     ".*{name}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.ProjectCypher/?fanart=http://repo.run/cypher/images/fanart.jpg&mode=1&name=&url=http://repo.run/cypher/build/beincoded.m3u$$LSProEncKey=cypher$$",
+    "steps"     : [
+     ".*{basename} {extension|number_to_text()|text_to_number()}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.ProjectCypher/?fanart=http://repo.run/cypher/images/fanart.jpg&mode=1&name=&url=http://repo.run/cypher/cyphermedia.m3u$$LSProEncKey=cypher$$",
+    "steps"     : [
+     ".*{basename} {extension|number_to_text()|text_to_number()}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.ProjectCypher/?fanart=http://repo.run/cypher/images/fanart.jpg&mode=1&name=&url=http://repo.run/cypher/cyphermedia.xml$$LSProEncKey=cypher$$",
+    "steps"     : [
+     ".*{basename} {extension|number_to_text()|text_to_number()}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ]
+}

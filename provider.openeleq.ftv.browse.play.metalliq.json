@@ -1,0 +1,31 @@
+{
+ "name"         : "F.T.V. [COLOR ff0084ff]-[/COLOR] Browse Play ([COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR])",
+ "repository"   : "plugin.video.Kinkin",
+ "plugin"       : "plugin.video.F.T.V",
+ "priority"     : 800,
+ "id"           : "provider.openeleq.ftv.browse.play",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [],
+ "tvshows"      : [],
+ "live"         : [
+  [
+   {
+    "link": "plugin://plugin.video.F.T.V",
+    "steps": [
+     "@anyexcept:Recordings||My Channels||FRENCH||GAMER",
+     ".*{name} .*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link": "plugin://plugin.video.F.T.V",
+    "steps": [
+     "@anyexcept:Recordings||My Channels||FRENCH||GAMER",
+     ".*{basename} {extension|number_to_text()|text_to_number()}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ]
+}
