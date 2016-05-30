@@ -1,0 +1,59 @@
+{
+ "name"         : "ZemTV.com [COLOR ff0084ff]-[/COLOR] Browse Play ([COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR])",
+ "repository"   : "repository.shani",
+ "plugin"       : "plugin.video.ZemTV-shani",
+ "priority"     : 900,
+ "id"           : "provider.openeleq.zemtv-shani.browse.play",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [],
+ "tvshows"      : [],
+ "live"         : [
+  [
+   {
+    "link"      : "plugin://plugin.video.ZemTV-shani/?mode=67&name=&url=http%3a%2f%2f195.154.183.48%3a8000%2fget.php%3fusername%3droberto1%26password%3droberto1%26type%3dm3u%26output%3dmpegts",
+    "steps"     : [
+     ".*{name}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.ZemTV-shani/?mode=67&name=&url=http%3a%2f%2f195.154.183.48%3a8000%2fget.php%3fusername%3droberto1%26password%3droberto1%26type%3dm3u%26output%3dmpegts",
+    "steps"     : [
+     ".*{basename} {extension|number_to_text()|text_to_number()}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.ZemTV-shani/?mode=67&name=&url=http%3a%2f%2f195.154.183.48%3a8000%2fget.php%3fusername%3delio%26password%3delio%26type%3dm3u%26output%3dmpegts",
+    "steps"     : [
+     ".*{name}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.ZemTV-shani/?mode=67&name=&url=http%3a%2f%2f195.154.183.48%3a8000%2fget.php%3fusername%3delio%26password%3delio%26type%3dm3u%26output%3dmpegts",
+    "steps"     : [
+     ".*{basename} {extension|number_to_text()|text_to_number()}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.ZemTV-shani/?mode=13&name=Sports&url=Live",
+    "steps"     : [
+     "@anyexcept:only",
+     ".*{name}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.ZemTV-shani/?mode=13&name=Sports&url=Live",
+    "steps"     : [
+     "@anyexcept:only",
+     ".*{basename} {extension|number_to_text()|text_to_number()}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ]
+}
