@@ -1,0 +1,65 @@
+{
+ "name"         : "UK Turk Playlists [COLOR ff0084ff]-[/COLOR] Browse Play ([COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR])",
+ "repository"   : "repository.metalkettle",
+ "plugin"       : "plugin.video.ukturk",
+ "priority"     : 800,
+ "id"           : "provider.openeleq.ukturk.browse.play",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.ukturk/?description&iconimage=http://metalkettle.co/UKTurk18022016/thumbs/new/Uk%2520turk%2520thumbnails%2520movies1.jpg&mode=1&name=Movies&url=http://metalkettle.co/UKTurk18022016/movies/Index.txt",
+    "steps"     : [
+     ".*{title}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.ukturk/?description&iconimage=http://metalkettle.co/UKTurk18022016/thumbs/new/Uk%2520turk%2520thumbnails%2520standup%2520comedy.jpg&mode=1&name=Stand-Up%20Comedy&url=http://metalkettle.co/UKTurk18022016/Standup.txt",
+    "steps"     : [
+     ".*{title}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.ukturk/?description&iconimage=http://metalkettle.co/UKTurk18022016/thumbs/new/Uk%2520turk%2520thumbnails%2520tv%2520shows.jpg&mode=1&name=TV%20Shows&url=http://metalkettle.co/UKTurk18022016/tv%20shows/Index.txt",
+    "steps"     : [
+     "($$.*$$)*{clearname}($$.*$$)*",
+     ".*S{season:02d}E{episode:02d}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.ukturk/?description&iconimage=http://metalkettle.co/UKTurk18022016/thumbs/new/Uk%2520turk%2520thumbnails%2520cartoons.jpg&mode=1&name=Cartoons&url=http://metalkettle.co/UKTurk18022016/cartoons/Index.txt",
+    "steps"     : [
+     "($$.*$$)*{clearname}($$.*$$)*",
+     ".*S{season:02d}E{episode:02d}.*|.*E{episode:02d}.*|.*E{absolute_number:02d}.*|.*{title}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "live"         : [
+  [
+   {
+    "link"      : "plugin://plugin.video.ukturk/?description&iconimage=http://metalkettle.co/UKTurk18022016/thumbs/new/Uk%2520turk%2520thumbnails%2520live%2520tv.jpg&mode=1&name=Live%20TV&url=http://metalkettle.co/UKTurk18022016/Live%2520TV.txt",
+    "steps"     : [
+     ".*{name}.*|.*{name|ws()}.*|.*{basename}.*{extension|number_to_text()}.*|.*{basename}.*{extension|text_to_number()}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.ukturk/?description&iconimage=http://metalkettle.co/UKTurk18022016/thumbs/new/Uk%2520turk%2520thumbnails%2520sports.jpg&mode=1&name=Sports&url=http://metalkettle.co/UKTurk18022016/SportsList.txt",
+    "steps"     : [
+     ".*{name}.*|.*{name|ws()}.*|.*{basename}.*{extension|number_to_text()}.*|.*{basename}.*{extension|text_to_number()}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ] 
+}

@@ -13,16 +13,8 @@
    {
     "link": "plugin://plugin.video.F.T.V",
     "steps": [
-     "@anyexcept:Recordings||My Channels||FRENCH||GAMER",
-     ".*{name} .*"
-     ],
-    "action"    : "PLAY"
-   },
-   {
-    "link": "plugin://plugin.video.F.T.V",
-    "steps": [
-     "@anyexcept:Recordings||My Channels||FRENCH||GAMER",
-     ".*{basename} {extension|number_to_text()|text_to_number()}.*"
+     "@anyexcept:My Recordings|My Channels|FRENCH TV|GAMER TV",
+     ".*{name}.*|.*{name|ws()}.*|.*{basename} {extension|number_to_text()}.*|.*{basename} {extension|text_to_number()}.*"
      ],
     "action"    : "PLAY"
    }

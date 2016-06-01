@@ -1,0 +1,23 @@
+{
+ "name"         : "[B][I][COLOR red]DNA TV[/COLOR] [COLOR lime]PRO Beta[/COLOR][/I][/B] [COLOR ff0084ff]-[/COLOR] Browse Play ([COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR])",
+ "repository"   : "repository.dnaREPO-v2",
+ "plugin"       : "plugin.video.dnatv",
+ "priority"     : 800,
+ "id"           : "provider.openeleq.dnatv.browse.play",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [],
+ "tvshows"      : [],
+ "live"         : [
+  [
+   {
+    "link": "plugin://plugin.video.dnatv/?description&mode=100&name=&url=0",
+    "steps": [
+    "@any",
+     ".*{name}.*|.*{basename}.*{extension}.*|.*{basename}.*{extension|number_to_text()}.*|.*{basename}.*{extension|text_to_number()}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ]
+}

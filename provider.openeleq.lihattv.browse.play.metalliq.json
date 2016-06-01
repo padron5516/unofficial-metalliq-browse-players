@@ -1,15 +1,15 @@
 {
  "name"         : "lihattv [COLOR ff0084ff]-[/COLOR] Browse Play ([COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR])",
- "repository"   : "repository.q",
+ "repository"   : "na",
  "plugin"       : "plugin.video.lihattv",
- "priority"     : 900,
+ "priority"     : 800,
  "id"           : "provider.openeleq.lihattv.browse.play",
  "filters"      : {},
  "postprocess"  : "",
  "movies"       : [
    [
    {
-    "link"      : "plugin://plugin.video.lihattv/?channelThumb=special://fhome/addons/plugin.video.lihattv/icon.png&mode=channel&type=Category&url=http%3a%2f%2flihattv.us%2f%3fch%3dmovies%26g%3d%2a%26c%3d%2a",
+    "link"      : "plugin://plugin.video.lihattv/?channelThumb=special://home/addons/plugin.video.lihattv/icon.png&mode=channel&type=Category&url=http://lihattv.us/?ch=movies%26g=%2a%26c=%2a",
     "steps"     : [
      ".*{title}.*"
      ],
@@ -23,17 +23,9 @@
  "live"         : [
   [
    {
-    "link"      : "plugin://plugin.video.lihattv/?channelThumb=special://home/addons/plugin.video.lihattv/icon.png&mode=channel&type=Category&url=http%3a%2f%2flihattv.us%2f%3fch%3dtv%26g%3d%2a%26c%3d%2a",
+    "link"      : "plugin://plugin.video.lihattv/?channelThumb=special://home/addons/plugin.video.lihattv/icon.png&mode=channel&type=Category&url=http://lihattv.us/?ch=tv%26g=%2a%26c=%2a",
     "steps"     : [
-     ".*{name}.*"
-     ],
-    "action"    : "PLAY"
-   },
-
-   {
-    "link"      : "plugin://plugin.video.lihattv/?channelThumb=special://home/addons/plugin.video.lihattv/icon.png&mode=channel&type=Category&url=http%3a%2f%2flihattv.us%2f%3fch%3dtv%26g%3d%2a%26c%3d%2a",
-    "steps"     : [
-     ".*{basename} {extension|number_to_text()|text_to_number()} .*"
+     ".*{name}.*|.*{name|ws()}.*|.*{basename} {extension|number_to_text()}.*|.*{basename} {extension|text_to_number()}.*"
      ],
     "action"    : "PLAY"
    }

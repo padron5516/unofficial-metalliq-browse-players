@@ -1,0 +1,24 @@
+{
+ "name"         : ".ADRIAN SPORTS. [COLOR ff0084ff]-[/COLOR] Browse Play ([COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR])",
+ "repository"   : "repository.adriansports",
+ "plugin"       : "plugin.video.adriansports",
+ "priority"     : 800,
+ "id"           : "provider.openeleq.adriansports.browse.play",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [],
+ "tvshows"      : [],
+ "music"        : [],
+ "music_video"  : [],
+ "live"         : [
+  [
+   {
+    "link"      : "plugin://plugin.video.adriansports/?fanart=https://goo.gl/kw8Rmg&mode=1&name=&url=https://raw.githubusercontent.com/ProjectAdrian/Adrian_Sports/master/List/Sports",
+    "steps"     : [
+     ".*{name}.*|.*{basename}.*{extension}.*|.*{basename}.*{extension|number_to_text()}.*|.*{basename}.*{extension|text_to_number()}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ]
+}

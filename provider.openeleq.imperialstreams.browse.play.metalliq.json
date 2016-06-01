@@ -1,0 +1,38 @@
+{
+ "name"         : "Imperial Streams [COLOR ff0084ff]-[/COLOR] Browse Play ([COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR])",
+ "repository"   : "repository.mdrepo",
+ "plugin"       : "plugin.video.mdimperialstreams",
+ "priority"     : 800,
+ "id"           : "provider.openeleq.imperialstreams.browse.play",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.mdimperialstreams/?description&iconimage=special://home/addons/plugin.video.mdimperialstreams/resources/art/GENRE.png&mode=7&name=&url=http://imoviemax.se",
+    "steps"     : [
+     "@any",
+     ".*{title}.*{year}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.mdimperialstreams/?description&iconimage=special://home/addons/plugin.video.mdimperialstreams/resources/art/GENRE.png&mode=8&name=&url=http://tvshows.imoviemax.se",
+    "steps"     : [
+     "@any",
+     ".*]{clearname}.*",
+     ".*{season}.*",
+     ".*{title}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "music"        : [],
+ "music_video"  : [],
+ "live"         : []
+}

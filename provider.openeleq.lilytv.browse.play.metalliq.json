@@ -1,0 +1,59 @@
+{
+ "name"         : "Lily sports [COLOR ff0084ff]-[/COLOR] Browse Play ([COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR])",
+ "repository"   : "na",
+ "plugin"       : "plugin.video.Lily_sports",
+ "priority"     : 800,
+ "id"           : "provider.openeleq.lily_sports.browse.play",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.Lily_sports/?fanart=http://kodeekrazy.net/addon/main1.png&mode=1&name=&url=http://kodeekrazy.net/Lily_sports/movies/movieshome.txt",
+    "steps"     : [
+     "@any",
+     ".*{title}.*{year}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [],
+ "music"        : [],
+ "music_video"  : [
+  [
+   {
+    "link"      : "plugin://plugin.video.Lily_sports/?fanart=http://kodeekrazy.net/addon/main1.png&mode=1&name=&url=http://kodeekrazy.net/Lily_sports/music/music/concerthome.txt",
+    "steps"     : [
+     ".*{artist}.*{album}.*|.*{artist}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "live"         : [
+  [
+   {
+    "link": "plugin://plugin.video.Lily_sports/?fanart=http://kodeekrazy.net/addon/main1.png&mode=1&name=&url=http://kodeekrazy.net/Lily_sports/movies/skymovies.txt",
+    "steps": [
+     ".*{name}.*|.*{basename}.*{extension}.*|.*{basename}.*{extension|number_to_text()}.*|.*{basename}.*{extension|text_to_number()}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link": "plugin://plugin.video.Lily_sports/?fanart=http://kodeekrazy.net/Lily_sports/thumb/fanart.jpg&mode=1&name=&url=http://kodeekrazy.net/Lily_sports/sports/sporttext.txt",
+    "steps": [
+     ".*{name}.*|.*{basename}.*{extension}.*|.*{basename}.*{extension|number_to_text()}.*|.*{basename}.*{extension|text_to_number()}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link": "plugin://plugin.video.Lily_sports/?fanart=http://kodeekrazy.net/addon/main1.png&mode=1&name=&url=http://kodeekrazy.net/Lily_sports/music/music/musictv.txt",
+    "steps": [
+     ".*{name}.*|.*{basename}.*{extension}.*|.*{basename}.*{extension|number_to_text()}.*|.*{basename}.*{extension|text_to_number()}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ]
+}

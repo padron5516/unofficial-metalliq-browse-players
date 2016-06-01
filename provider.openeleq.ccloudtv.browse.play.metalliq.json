@@ -2,7 +2,7 @@
  "name"         : "cCloud TV [COLOR ff0084ff]-[/COLOR] Browse Play ([COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR])",
  "repository"   : "repository.podgod",
  "plugin"       : "plugin.video.ccloudtv",
- "priority"     : 900,
+ "priority"     : 800,
  "id"           : "provider.openeleq.ccloudtv.browse.play",
  "filters"      : {},
  "postprocess"  : "",
@@ -13,14 +13,7 @@
    {
     "link"      : "plugin://plugin.video.ccloudtv/?iconimage=special://home/addons/plugin.video.ccloudtv/resources/icons/allchannels.png&mode=2&name=&url=http://www.youtube.com",
     "steps"     : [
-     ".*{name}.*"
-     ],
-    "action"    : "PLAY"
-   },
-   {
-    "link"      : "plugin://plugin.video.ccloudtv/?iconimage=special://home/addons/plugin.video.ccloudtv/resources/icons/allchannels.png&mode=2&name=&url=http://www.youtube.com",
-    "steps"     : [
-     ".*{basename} {extension|number_to_text()|text_to_number()} .*"
+     ".*{name}.*|.*{name|ws()}.*|.*{basename} {extension|number_to_text()}.*|.*{basename} {extension|text_to_number()}.*"
      ],
     "action"    : "PLAY"
    }

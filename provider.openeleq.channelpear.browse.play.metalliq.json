@@ -1,0 +1,25 @@
+{
+ "name"         : "channel PEAR [COLOR ff0084ff]-[/COLOR] Browse Play ([COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR])",
+ "repository"   : "repository.podgod",
+ "plugin"       : "plugin.video.channelpear",
+ "priority"     : 800,
+ "id"           : "provider.openeleq.channelpear.browse.play",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [],
+ "tvshows"      : [],
+ "music"        : [],
+ "music_video"  : [],
+ "live"         : [
+  [
+   {
+    "link"      : "plugin://plugin.video.channelpear/",
+    "steps"     : [
+     ".*Channels.*",
+     ".*{name}.*|.*{basename}.*{extension}.*|.*{basename}.*{extension|number_to_text()}.*|.*{basename}.*{extension|text_to_number()}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ]
+}

@@ -1,16 +1,17 @@
 {
  "name"         : "[COLOR red]AK[/COLOR] [COLOR yellow]-[/COLOR] [COLOR turquoise]47[/COLOR] [COLOR ff0084ff]-[/COLOR] Browse Play ([COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR])",
+ "repository"   : "na",
  "plugin"       : "plugin.video.AK-47",
- "priority"     : 500,
+ "priority"     : 800,
  "id"           : "provider.openeleq.ak47.browse.play",
  "filters"      : {},
  "postprocess"  : "",
  "movies"       : [
   [
    {
-    "link"      : "plugin://plugin.video.AK-47/?fanart=http%3a%2f%2fj.mp%2fak47-fan&mode=1&name=%5bCOLOR%20teal%5d%5bB%5dMOVIES%5b%2fB%5d%5b%2fCOLOR%5d&url=http%3a%2f%2fhitflix.tv%2faddon%2fmov%2fmenu.xml%24%24LSProEncKey%3dfuckoff%24%24",
+    "link"      : "plugin://plugin.video.AK-47/?fanart=http://j.mp/ak47-fan&mode=1&name=&url=http://hitflix.tv/addon/mov/menu.xml$$LSProEncKey=fuckoff$$",
     "steps"     : [
-     "@anycontaining:2016||2015||NEW||250||AFDAH",
+     "@anycontaining:2016|2015|NEW|250|AFDAH",
      ".*{title}.*{year}.*"
      ],
     "action"    : "PLAY"
@@ -20,7 +21,7 @@
  "tvshows"      : [
   [
    {
-    "link"      : "plugin://plugin.video.AK-47/?fanart=http%3a%2f%2fj.mp%2fak47-fan&mode=1&name=%5bCOLOR%20lime%5d%5bB%5dTV-Shows%5b%2fB%5d%5b%2fCOLOR%5d&url=http%3a%2f%2fhitflix.tv%2faddon%2ftvsh%2fmain.xml",
+    "link"      : "plugin://plugin.video.AK-47/?fanart=http://j.mp/ak47-fan&mode=1&name=&url=http://hitflix.tv/addon/tvsh/main.xml",
     "steps"     : [
      ".*{clearname}.*",
      ".*{clearname}.*season {season}.*",
@@ -29,7 +30,7 @@
     "action"    : "PLAY"
    },
    {
-    "link"      : "plugin://plugin.video.AK-47/?fanart=http%3a%2f%2fj.mp%2fak47-fan&mode=1&name=%5bCOLOR%20lime%5d%5bB%5dTV-Shows%5b%2fB%5d%5b%2fCOLOR%5d&url=http%3a%2f%2fhitflix.tv%2faddon%2ftvsh%2fmain.xml",
+    "link"      : "plugin://plugin.video.AK-47/?fanart=http://j.mp/ak47-fan&mode=1&name=&url=http://hitflix.tv/addon/tvsh/main.xml",
     "steps"     : [
      ".*{clearname}.*",
      ".*{clearname}.*s{season}.*e{episode}.*"
@@ -43,18 +44,10 @@
  "live"         : [
   [
    {
-    "link"      : "plugin://plugin.video.AK-47/?fanart=http%3a%2f%2fj.mp%2fak47-fan&mode=1&name=%5bCOLOR%20red%5d%5bB%5d%5bI%5dLIVE%20TV%5b%2fI%5d%5b%2fB%5d%5b%2fCOLOR%5d&url=http%3a%2f%2fhitflix.tv%2faddon%2ftv%2fmain.xml%24%24LSProEncKey%3dfuckoff%24%24",
+    "link"      : "plugin://plugin.video.AK-47/?fanart=http://j.mp/ak47-fan&mode=1&name=&url=http://hitflix.tv/addon/tv/main.xml$$LSProEncKey=fuckoff$$",
     "steps"     : [
-     "@anyexcept:FilmON",
-     ".*{name}.*"
-     ],
-    "action"    : "PLAY"
-   },
-   {
-    "link"      : "plugin://plugin.video.AK-47/?fanart=http%3a%2f%2fj.mp%2fak47-fan&mode=1&name=%5bCOLOR%20red%5d%5bB%5d%5bI%5dLIVE%20TV%5b%2fI%5d%5b%2fB%5d%5b%2fCOLOR%5d&url=http%3a%2f%2fhitflix.tv%2faddon%2ftv%2fmain.xml%24%24LSProEncKey%3dfuckoff%24%24",
-    "steps"     : [
-     "@anyexcept:FilmON",
-     ".*{basename} {extension|number_to_text()|text_to_number()}.*"
+     "@anynotcontaining:FilmON",
+     ".*{name}.*|.*{name|ws()}.*|.*{basename} {extension|number_to_text()}.*|.*{basename} {extension|text_to_number()}.*"
      ],
     "action"    : "PLAY"
    }
