@@ -1,0 +1,25 @@
+{
+ "name"         : "[COLOR white]B[/COLOR][COLOR dodgerblue]rettus [/COLOR][COLOR white]S[/COLOR][COLOR dodgerblue]treams[/COLOR] [COLOR ff0084ff]-[/COLOR] Browse Play ([COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR])",
+ "repository"   : "na",
+ "plugin"       : "plugin.video.brettus.streams",
+ "priority"     : 800,
+ "id"           : "provider.openeleq.brettusstreams.browse.play",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [],
+ "tvshows"      : [],
+ "music"        : [],
+ "musicvideos"  : [],
+ "live"         : [
+  [
+   {
+    "link"      : "plugin://plugin.video.brettus.streams/?action=directory&url=http://brettusbuilds.com/brettus%2520streams/LIVE%2520TV/LIVE%2520TV%2520INDEX.XML",
+    "steps"     : [
+     "@any",
+     ".*{name}.*|.*{name|ws()}.*|.*{basename} {extension|number_to_text()}.*|.*{basename} {extension|text_to_number()}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ]
+}
