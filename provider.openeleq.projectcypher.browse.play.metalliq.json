@@ -40,7 +40,7 @@
  ],
  "tvshows"      : [],
  "music"        : [],
- "music_video"  : [
+ "musicvideos"  : [
   [
    {
     "link"      : "plugin://plugin.video.ProjectCypher/?fanart=http://repo.run/cypher/images/fanart.jpg&mode=1&name=&url=http://repo.run/cypher/concertevent.xml$$LSProEncKey=cypher$$",
