@@ -1,0 +1,25 @@
+{
+ "name"         : "Phoenix [COLOR ff0084ff]-[/COLOR] Browse Play ([COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR])",
+ "repository"   : "repository.xbmchub",
+ "plugin"       : "plugin.video.phstreams",
+ "priority"     : 800,
+ "id"           : "provider.openeleq.phoenix.browse.play",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [],
+ "tvshows"      : [],
+ "music"        : [],
+ "musicvideos"  : [],
+ "live"         : [
+  [
+   {
+    "link"      : "plugin://plugin.video.phstreams/?action=directory&url=http://phoenixtv.offshorepastebin.com/tv/main.xml",
+    "steps"     : [
+     "@anyexcept:Events|Shows|Radio",
+     ".*{name}.*|.*{name|ws()}.*|.*{basename} {extension|number_to_text()}.*|.*{basename} {extension|text_to_number()}.*?{delay}|{basename|replace(*, star)}"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ]
+}

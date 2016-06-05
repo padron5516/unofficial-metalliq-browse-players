@@ -1,0 +1,31 @@
+{
+ "name"         : "MR Network TV [COLOR ff0084ff]-[/COLOR] Browse Play ([COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR])",
+ "repository"   : "repository.projectmrnetwork",
+ "plugin"       : "plugin.video.mrnetworktv",
+ "priority"     : 800,
+ "id"           : "provider.openeleq.mrnetworktv.browse.play",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [],
+ "tvshows"      : [],
+ "live"         : [
+  [
+   {
+    "link": "plugin://plugin.video.mrnetworktv",
+    "steps": [
+     "@anyexcept:SELECTED CHANNELS",
+     ".*$$.*?{name|ws()}$$.*|.*$$.*?{name}$$.*|.*$$.*?{basename|ws()} {extension|number_to_text()}$$.*|.*$$.*?{basename|ws()} {extension|text_to_number()}$$.*|.*$$.*?{basename} {extension|number_to_text()}$$.*|.*$$.*?{basename} {extension|text_to_number()}$$.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link": "plugin://plugin.video.mrnetworktv/?fanart=http://i376.photobucket.com/albums/oo204/indiecrew/MR%2520Network%2520TV/fanart_zpsyx9pb7xu.png&mode=1&name=SELECTED%20CHANNELS&url=https://goo.gl/bLg0sb",
+    "steps": [
+     "@any",
+     ".*$$.*?{name|ws()}$$.*|.*$$.*?{name}$$.*|.*$$.*?{basename|ws()} {extension|number_to_text()}$$.*|.*$$.*?{basename|ws()} {extension|text_to_number()}$$.*|.*$$.*?{basename} {extension|number_to_text()}$$.*|.*$$.*?{basename} {extension|text_to_number()}$$.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ]
+}

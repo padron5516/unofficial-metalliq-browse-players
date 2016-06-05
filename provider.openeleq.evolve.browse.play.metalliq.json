@@ -1,6 +1,6 @@
 {
  "name"         : "Evolve [COLOR ff0084ff]-[/COLOR] Browse Play ([COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR])",
- "repository"   : "repository.Goliath",
+ "repository"   : "na",
  "plugin"       : "plugin.video.evolve",
  "priority"     : 800,
  "id"           : "provider.openeleq.evolve.browse.play",
