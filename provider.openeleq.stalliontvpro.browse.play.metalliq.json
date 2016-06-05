@@ -1,6 +1,6 @@
 {
  "name"         : "[COLOR blue]Stallion TV Pro[/COLOR] [COLOR ff0084ff]-[/COLOR] Browse Play ([COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR])",
- "repository"   : "repository.dnaREPO-v2",
+ "repository"   : "na",
  "plugin"       : "plugin.video.StallionTvPro",
  "priority"     : 800,
  "id"           : "provider.openeleq.stalliontvpro.browse.play",
